@@ -36,12 +36,12 @@ type SettingsProps = {
 // ];
 // new mac/windows servers
 let anisetteServers = [
-  ["new.ani.sidestore.io", "SideStore (Mac, .io)"],
   ["mac-ani.jkcoxson.com", "Jkcoxson (Mac)"],
+  ["new.ani.sidestore.io", "SideStore (Mac, .io)"],
   ["ani3.stikstore.app", "StikStore (Mac)"],
   // works ~50% of the time, and doesn't work with SMS 2FA
-  ["ani.jkcoxson.com", "Jkcoxson (Windows)"],
-  ["ani2.stikstore.app", "StikStore (Windows)"],
+  // ["ani.jkcoxson.com", "Jkcoxson (Windows)"],
+  // ["ani2.stikstore.app", "StikStore (Windows)"],
 ];
 
 export const Settings = ({
@@ -53,8 +53,8 @@ export const Settings = ({
 }: SettingsProps) => {
   const { t } = useTranslation();
   const [anisetteServer, setAnisetteServer] = useStore<string>(
-    "newAnisetteServer",
-    "new.ani.sidestore.io",
+    "anisetteServer3-1",
+    "mac-ani.jkcoxson.com",
   );
 
   const [overrideKeyring, setOverrideKeyring] = useStore<boolean>(
